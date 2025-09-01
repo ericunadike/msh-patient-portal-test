@@ -102,7 +102,7 @@
             position: relative;
             font-size: 28px;
             font-weight: 800;
-            color: #001f3f; /* Matches darker navy blue title color */
+            color: #001f3f; /* Navy blue for logo */
         }
 
         @keyframes pulse {
@@ -118,6 +118,7 @@
 
         .hospital-icon::before {
             content: 'MSH';
+            color: #001f3f; /* Navy blue for logo text */
         }
 
         .hospital-icon::after {
@@ -135,7 +136,7 @@
         }
 
         .hospital-header h1 {
-            color: #001f3f; /* Darker navy blue */
+            color: #001f3f; /* Navy blue for title */
             font-size: 20px;
             font-weight: 800;
             margin-bottom: 6px;
@@ -160,7 +161,7 @@
 
         .tab-indicator {
             position: absolute;
-            background: #27ae60; /* Darker green for consistency */
+            background: #27ae60;
             border-radius: 16px;
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 
@@ -201,7 +202,7 @@
         }
 
         .tab-btn:not(.active):hover {
-            color: #27ae60; /* Darker green for hover */
+            color: #27ae60;
             transform: translateY(-2px) scale(1.02);
         }
 
@@ -274,7 +275,7 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #27ae60; /* Darker green */
+            border-color: #27ae60;
             background: white;
         }
 
@@ -286,7 +287,7 @@
             color: #a0a0a0;
             font-weight: 500;
             font-size: 14px;
-            opacity: 1; /* Consistent opacity */
+            opacity: 1;
         }
 
         .form-input.error {
@@ -329,9 +330,9 @@
             appearance: none;
         }
 
-        .form-select:focus {
+        .form-select:focus, .form-select:hover {
             outline: none;
-            border-color: #27ae60; /* Darker green */
+            border-color: #27ae60;
             background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%2327ae60"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center;
             background-size: 20px;
         }
@@ -379,7 +380,7 @@
         }
 
         .custom-checkbox.checked {
-            background: #27ae60; /* Darker green */
+            background: #27ae60;
             border-color: #27ae60;
             transform: scale(1.1) rotate(5deg);
         }
@@ -438,7 +439,7 @@
         }
 
         .payment-info h4 {
-            color: #27ae60; /* Darker green */
+            color: #27ae60;
             font-size: 16px;
             font-weight: 800;
             margin-bottom: 12px;
@@ -459,7 +460,7 @@
         }
 
         .price-highlight {
-            color: #27ae60; /* Darker green */
+            color: #27ae60;
             font-weight: 800;
             background: rgba(152, 251, 152, 0.15);
             padding: 4px 8px;
@@ -498,7 +499,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background: #27ae60; /* Darker green */
+            background: #27ae60;
             border-radius: 2px;
             animation: glow 2s infinite;
         }
@@ -535,11 +536,11 @@
         .rating-option:hover {
             transform: translateY(-3px) scale(1.03) rotate(1deg);
             box-shadow: 0 8px 25px rgba(152, 251, 152, 0.25);
-            border-color: #27ae60; /* Darker green */
+            border-color: #27ae60;
         }
 
         .rating-option.selected {
-            border-color: #27ae60; /* Darker green */
+            border-color: #27ae60;
             border-width: 4px;
             transform: translateY(-2px) scale(1.05);
         }
@@ -579,11 +580,13 @@
             hyphens: auto;
             max-width: 100%;
             padding: 0 4px;
-            white-space: nowrap; /* Ensure text stays on a single line */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .rating-option.selected .rating-label {
-            color: #27ae60; /* Darker green */
+            color: #27ae60;
             font-weight: 800;
         }
 
@@ -635,7 +638,7 @@
 
         .comment-input:focus, .comment-textarea:focus {
             outline: none;
-            border-color: #27ae60; /* Darker green */
+            border-color: #27ae60;
             background: white;
         }
 
@@ -643,7 +646,7 @@
             color: #a0a0a0;
             font-weight: 500;
             font-size: 14px;
-            opacity: 1; /* Consistent opacity */
+            opacity: 1;
         }
 
         .submit-section {
@@ -654,7 +657,7 @@
         .submit-btn {
             width: 100%;
             padding: 18px 24px;
-            background: #27ae60; /* Darker green */
+            background: #27ae60;
             color: white;
             border: none;
             border-radius: 20px;
@@ -731,7 +734,7 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: #27ae60; /* Darker green */
+            background: #27ae60;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
@@ -760,7 +763,7 @@
         }
 
         .thank-you h2, .registration-success h2 {
-            color: #27ae60; /* Darker green */
+            color: #27ae60;
             margin-bottom: 16px;
             font-size: 24px;
             font-weight: 800;
@@ -856,7 +859,9 @@
                 font-size: 9px;
                 line-height: 1.0;
                 padding: 0 2px;
-                white-space: nowrap; /* Ensure single line */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
             .comment-textarea {
@@ -914,7 +919,7 @@
             
             .form-input::placeholder, .comment-input::placeholder, .comment-textarea::placeholder {
                 font-size: 14px;
-                opacity: 1; /* Consistent opacity */
+                opacity: 1;
             }
             
             .rating-scale {
@@ -972,7 +977,9 @@
             .rating-label {
                 font-size: 8px;
                 padding: 0 1px;
-                white-space: nowrap; /* Ensure single line */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
             .rating-scale {
@@ -981,7 +988,7 @@
             
             .form-input::placeholder, .comment-input::placeholder, .comment-textarea::placeholder {
                 font-size: 13px;
-                opacity: 1; /* Consistent opacity */
+                opacity: 1;
             }
             
             .question-title {
@@ -1015,7 +1022,7 @@
         .rating-option:focus-visible,
         .submit-btn:focus-visible,
         .custom-checkbox:focus-visible {
-            outline: 3px solid #27ae60; /* Darker green */
+            outline: 3px solid #27ae60;
             outline-offset: 2px;
         }
 
@@ -1025,7 +1032,7 @@
         }
         
         .hospital-header h1 {
-            color: #001f3f; /* Darker navy blue */
+            color: #001f3f;
         }
         
         .hospital-header p {
@@ -1058,7 +1065,7 @@
             color: #a0a0a0;
             font-weight: 500;
             font-size: 14px;
-            opacity: 1; /* Consistent opacity */
+            opacity: 1;
         }
         
         .rating-option {
@@ -1210,7 +1217,7 @@
                     <div class="form-group">
                         <label for="maritalStatus" class="required">Marital Status</label>
                         <select id="maritalStatus" class="form-select" required>
-                            <option value="">Select marital status</option>
+                            <option value="" disabled selected>Select marital status</option>
                             <option value="single">Single</option>
                             <option value="married">Married</option>
                             <option value="divorced">Divorced</option>
@@ -1249,7 +1256,7 @@
                     <div class="form-group">
                         <label for="gender" class="required">Gender</label>
                         <select id="gender" class="form-select" required>
-                            <option value="">Select your gender</option>
+                            <option value="" disabled selected>Select gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
@@ -1262,7 +1269,7 @@
                     <div class="form-group">
                         <label for="payor" class="required">Payor Type</label>
                         <select id="payor" class="form-select" required>
-                            <option value="">Select payor type</option>
+                            <option value="" disabled selected>Select payor type</option>
                             <option value="personal">Personal - ₦7,500</option>
                             <option value="family">Family - ₦15,000</option>
                             <option value="aiico">AIICO</option>
@@ -1277,7 +1284,7 @@
                             <option value="reliance">Reliance</option>
                             <option value="tht">THT</option>
                         </select>
-                        <div class="error-message">Please select your payor type</div>
+                        <div class="error-message">Please select a payor type</div>
                     </div>
                 </div>
 
@@ -1895,4 +1902,23 @@
                 sparkle.style.pointerEvents = 'none';
                 sparkle.style.fontSize = '20px';
                 sparkle.style.zIndex = '9999';
-                sparkle.style.animation = 'sparkleFloat 1s ease-out
+                sparkle.style.animation = 'sparkleFloat 1s ease-out';
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            });
+
+            const sparkleStyle = document.createElement('style');
+            sparkleStyle.textContent = `
+                @keyframes sparkleFloat {
+                    0% { opacity: 1; transform: translateY(0) scale(1); }
+                    100% { opacity: 0; transform: translateY(-50px) scale(0.5); }
+                }
+            `;
+            document.head.appendChild(sparkleStyle);
+        });
+    </script>
+</body>
+</html>
