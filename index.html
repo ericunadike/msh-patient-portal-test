@@ -324,15 +324,10 @@
         }
 
         .form-select:focus, .form-select:hover {
-        outline: none;
-        border-color: #27ae60;
-        background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%2327ae60"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center;
-        background-size: 20px;
-
-        }
-
-        .form-select:not([value=""]):not(:placeholder-shown) {
-            background-color: rgba(173, 216, 230, 0.15);
+            outline: none;
+            border-color: #27ae60;
+            background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%2327ae60"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center;
+            background-size: 20px;
         }
 
         .form-select:focus-visible {
@@ -345,7 +340,7 @@
             padding: 12px;
         }
 
-        checkbox-group {
+        .checkbox-group {
             display: flex;
             align-items: flex-start;
             gap: 16px;
@@ -354,7 +349,6 @@
             border-radius: 16px;
             transition: all 0.3s ease;
             border: 2px solid transparent;
-            cursor: pointer;
         }
 
         .checkbox-group:hover {
@@ -390,9 +384,9 @@
             font-size: 16px;
             font-weight: bold;
             animation: checkPop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                   }
+        }
 
-       @keyframes checkPop {
+        @keyframes checkPop {
             0% { transform: scale(0) rotate(180deg); }
             100% { transform: scale(1) rotate(0deg); }
         }
@@ -1931,4 +1925,4 @@
         });
     </script>
 </body>
-</html>
+    </html>
