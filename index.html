@@ -96,11 +96,11 @@
             align-items: center;
             justify-content: center;
             box-shadow: 
-                0 8px 30px rgba(102, 204, 153, 0.4),
-                0 0 0 8px rgba(102, 204, 153, 0.1);
+                0 8px 30px rgba(30, 64, 175, 0.4),
+                0 0 0 8px rgba(30, 64, 175, 0.1);
             animation: pulse 2s infinite, wiggle 3s infinite;
             position: relative;
-            border: 3px solid #66cc99;
+            border: 3px solid #1e40af;
             overflow: hidden;
         }
 
@@ -142,7 +142,7 @@
         }
 
         .hospital-header h1 {
-            color: #2563eb;
+            color: #1e40af;
             font-size: 20px;
             font-weight: 800;
             margin-bottom: 6px;
@@ -159,19 +159,19 @@
             display: flex;
             margin-bottom: 20px;
             border-radius: 20px;
-            background: rgba(102, 204, 153, 0.1);
+            background: rgba(30, 64, 175, 0.1);
             padding: 6px;
             position: relative;
-            box-shadow: inset 0 2px 8px rgba(102, 204, 153, 0.15);
+            box-shadow: inset 0 2px 8px rgba(30, 64, 175, 0.15);
         }
 
         .tab-indicator {
             position: absolute;
-            background: #66cc99;
+            background: #1e40af;
             border-radius: 16px;
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 
-                0 4px 20px rgba(102, 204, 153, 0.4),
+                0 4px 20px rgba(30, 64, 175, 0.4),
                 0 0 0 2px rgba(255, 255, 255, 0.5);
             width: 50%;
             height: 52px;
@@ -208,7 +208,7 @@
         }
 
         .tab-btn:not(.active):hover {
-            color: #66cc99;
+            color: #1e40af;
             transform: translateY(-2px) scale(1.02);
         }
 
@@ -281,7 +281,7 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #66cc99;
+            border-color: #3b82f6;
             background: white;
         }
 
@@ -337,7 +337,7 @@
 
         .form-select:focus {
             outline: none;
-            border-color: #66cc99;
+            border-color: #3b82f6;
             background: white;
         }
 
@@ -363,8 +363,8 @@
         }
 
         .checkbox-group:hover {
-            background: rgba(102, 204, 153, 0.08);
-            border-color: rgba(102, 204, 153, 0.2);
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2);
             transform: translateY(-1px);
         }
 
@@ -384,8 +384,8 @@
         }
 
         .custom-checkbox.checked {
-            background: #66cc99;
-            border-color: #66cc99;
+            background: #3b82f6;
+            border-color: #3b82f6;
             transform: scale(1.1) rotate(5deg);
         }
 
@@ -414,8 +414,8 @@
         }
 
         .payment-info {
-            background: rgba(102, 204, 153, 0.1);
-            border: 3px solid rgba(102, 204, 153, 0.2);
+            background: rgba(59, 130, 246, 0.1);
+            border: 3px solid rgba(59, 130, 246, 0.2);
             border-radius: 20px;
             padding: 20px;
             margin-top: 16px;
@@ -438,18 +438,12 @@
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
         .payment-info.show {
             display: block;
         }
 
         .payment-info h4 {
-            color: #66cc99;
+            color: #3b82f6;
             font-size: 16px;
             font-weight: 800;
             margin-bottom: 12px;
@@ -470,9 +464,9 @@
         }
 
         .price-highlight {
-            color: #66cc99;
+            color: #3b82f6;
             font-weight: 800;
-            background: rgba(102, 204, 153, 0.15);
+            background: rgba(59, 130, 246, 0.15);
             padding: 4px 8px;
             border-radius: 8px;
             font-size: 16px;
@@ -484,9 +478,9 @@
         .question-section {
             margin-bottom: 20px;
             padding: 16px;
-            background: rgba(102, 204, 153, 0.03);
+            background: rgba(59, 130, 246, 0.03);
             border-radius: 20px;
-            border: 2px solid rgba(102, 204, 153, 0.1);
+            border: 2px solid rgba(59, 130, 246, 0.1);
         }
 
         .question-title {
@@ -509,14 +503,14 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background: #66cc99;
+            background: #3b82f6;
             border-radius: 2px;
             animation: glow 2s infinite;
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 5px rgba(102, 204, 153, 0.3); }
-            50% { box-shadow: 0 0 20px rgba(102, 204, 153, 0.6); }
+            0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
         }
 
         .rating-grid {
@@ -544,12 +538,12 @@
 
         .rating-option:hover {
             transform: translateY(-3px) scale(1.03) rotate(1deg);
-            box-shadow: 0 8px 25px rgba(102, 204, 153, 0.25);
-            border-color: #66cc99;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+            border-color: #3b82f6;
         }
 
         .rating-option.selected {
-            border-color: #66cc99;
+            border-color: #3b82f6;
             border-width: 4px;
             transform: translateY(-2px) scale(1.05);
         }
@@ -591,7 +585,7 @@
         }
 
         .rating-option.selected .rating-label {
-            color: #66cc99;
+            color: #3b82f6;
             font-weight: 800;
         }
 
@@ -643,7 +637,7 @@
 
         .comment-input:focus, .comment-textarea:focus {
             outline: none;
-            border-color: #66cc99;
+            border-color: #3b82f6;
             background: white;
         }
 
@@ -661,7 +655,7 @@
         .submit-btn {
             width: 100%;
             padding: 18px 24px;
-            background: #66cc99;
+            background: #3b82f6;
             color: white;
             border: none;
             border-radius: 20px;
@@ -674,7 +668,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 8px 30px rgba(102, 204, 153, 0.4),
+                0 8px 30px rgba(59, 130, 246, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3);
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -694,8 +688,8 @@
         .submit-btn:hover:not(:disabled) {
             transform: translateY(-4px) scale(1.02);
             box-shadow: 
-                0 15px 40px rgba(102, 204, 153, 0.5),
-                0 0 0 4px rgba(102, 204, 153, 0.2);
+                0 15px 40px rgba(59, 130, 246, 0.5),
+                0 0 0 4px rgba(59, 130, 246, 0.2);
             animation: buttonPulse 0.6s ease-out;
         }
 
@@ -738,15 +732,15 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: #66cc99;
+            background: #3b82f6;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             animation: successBounce 2s infinite;
             box-shadow: 
-                0 10px 40px rgba(102, 204, 153, 0.4),
-                0 0 0 8px rgba(102, 204, 153, 0.1);
+                0 10px 40px rgba(59, 130, 246, 0.4),
+                0 0 0 8px rgba(59, 130, 246, 0.1);
         }
 
         @keyframes successBounce {
@@ -767,7 +761,7 @@
         }
 
         .thank-you h2, .registration-success h2 {
-            color: #66cc99;
+            color: #3b82f6;
             margin-bottom: 16px;
             font-size: 24px;
             font-weight: 800;
@@ -791,6 +785,27 @@
             animation: textPop 1s ease-out 0.7s both;
             word-wrap: break-word;
             overflow-wrap: break-word;
+        }
+
+        .progress-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e9ecef;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .progress-dot.active {
+            background: #3b82f6;
+            transform: scale(1.3);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         @media (max-width: 480px) {
@@ -931,3 +946,485 @@
             .checkbox-label {
                 font-size: 14px;
             }
+            
+            .payment-info p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .main-container {
+                padding: 10px;
+            }
+            
+            .hospital-header h1 {
+                font-size: 16px;
+            }
+            
+            .tab-btn {
+                padding: 10px 4px;
+                font-size: 10px;
+                gap: 2px;
+            }
+            
+            .tab-indicator {
+                height: 40px;
+            }
+            
+            .rating-grid {
+                gap: 2px;
+                margin: 0 -2px 8px -2px;
+            }
+            
+            .rating-option {
+                padding: 4px 1px;
+                border-radius: 12px;
+            }
+            
+            .rating-emoji {
+                font-size: 16px;
+            }
+            
+            .rating-label {
+                font-size: 7px;
+            }
+            
+            .rating-scale {
+                font-size: 9px;
+            }
+            
+            .form-input::placeholder, .comment-input::placeholder, .comment-textarea::placeholder {
+                font-size: 13px;
+            }
+            
+            .question-title {
+                font-size: 14px;
+            }
+            
+            .form-group label {
+                font-size: 13px;
+            }
+            
+            .form-select {
+                padding-right: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hospital-icon, .success-animation, .submit-btn::before, 
+            .success-icon, body::before, .hospital-icon::after,
+            .tab-indicator, .custom-checkbox, .rating-option {
+                animation: none !important;
+            }
+            
+            * {
+                transition-duration: 0.1s !important;
+            }
+        }
+
+        .tab-btn:focus-visible,
+        .rating-option:focus-visible,
+        .submit-btn:focus-visible,
+        .custom-checkbox:focus-visible {
+            outline: 3px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.98);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .hospital-header h1 {
+            color: #3b82f6;
+        }
+        
+        .hospital-header p {
+            color: #636e72;
+        }
+        
+        .form-group label,
+        .question-title,
+        .comment-section label {
+            color: #2d3436;
+        }
+        
+        .checkbox-label {
+            color: #636e72;
+        }
+        
+        .form-input,
+        .form-select,
+        .comment-input,
+        .comment-textarea {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2d3436;
+            border-color: #e9ecef;
+        }
+        
+        .form-input::placeholder,
+        .comment-input::placeholder,
+        .comment-textarea::placeholder {
+            color: #a0a0a0;
+        }
+        
+        .rating-option {
+            background: white;
+            border-color: #e9ecef;
+        }
+        
+        .question-section {
+            background: rgba(59, 130, 246, 0.03);
+            border-color: rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="hospital-header">
+            <div class="hospital-icon">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjg4IiBoZWlnaHQ9IjY4OCIgdmlld0JveD0iMCAwIDY4OCA2ODgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01NDQgMTQ0SDE0NFY1NDRINTQ0VjE0NFoiIGZpbGw9IiNCQkI0RjciLz4KPHA+CjxyZWN0IHg9IjEzNSIgeT0iMTM1IiB3aWR0aD0iNDE4IiBoZWlnaHQ9IjQxOCIgcng9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMzEzMTMxIiBzdHJva2Utd2lkdGg9IjE4Ii8+CjxyZWN0IHg9IjE2MCIgeT0iMjMwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjIyOCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjxyZWN0IHg9IjI0MCIgeT0iMjMwIiB3aWR0aD0iMjA4IiBoZWlnaHQ9IjExMCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjxyZWN0IHg9IjI0MCIgeT0iMzQ4IiB3aWR0aD0iMjA4IiBoZWlnaHQ9IjExMCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjxyZWN0IHg9IjQxOCIgeT0iMjMwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjIyOCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjwvcGF0aD4KPHA+CjxyZWN0IHg9IjI3MCIgeT0iMjI1IiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIyNzAiIHk9IjI1NSIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxyZWN0IHg9IjM0NSIgeT0iMjI1IiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIzNDUiIHk9IjI1NSIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxyZWN0IHg9IjI3MCIgeT0iMzkwIiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIyNzAiIHk9IjQyMCIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxyZWN0IHg9IjM0NSIgeT0iMzkwIiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIzNDUiIHk9IjQyMCIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxjaXJjbGUgY3g9IjM0NCIgY3k9IjM0NCIgcj0iMzUwIiBzdHJva2U9IiMzMTMxMzEiIHN0cm9rZS13aWR0aD0iMTIiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMzQ0IiBjeT0iMzQ0IiByPSIzMDAiIHN0cm9rZT0iIzMxMzEzMSIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMzQ0IDE0NEMzNDQgMTQ0IDQ5NCAyNzggNDk0IDM0NEM0OTQgNDEwIDQ0MCA1NDQgMzQ0IDU0NEMyNDggNTQ0IDE5NCA0MTAgMTk0IDM0NEMxOTQgMjc4IDM0NCAxNDQgMzQ0IDE0NFoiIGZpbGw9IiNGODUzNTQiLz4KPHA+CjxjaXJjbGUgY3g9IjI3NCIgY3k9IjMwNCIgcj0iMTQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjQxNCIgY3k9IjMwNCIgcj0iMTQiIGZpbGw9IndoaXRlIi8+CjwvcGF0aD4KPHA+CjxyZWN0IHg9IjMxNCIgeT0iMjY0IiB3aWR0aD0iNjAiIGhlaWdodD0iMTAwIiByeD0iMzAiIGZpbGw9IiNGODUzNTQiLz4KPHA+CjxyZWN0IHg9IjMzNCIgeT0iMzgwIiB3aWR0aD0iMjAiIGhlaWdodD0iOTAiIHJ4PSIxMCIgZmlsbD0iI0Y4NTM1NCIvPgo8L3BhdGg+CjxyZWN0IHg9IjMxNSIgeT0iNDAzIiB3aWR0aD0iNTgiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iI0Y4NTM1NCIvPgo8cGF0aCBkPSJNMzQ0IDY4QzMxNi44MDcgNjggMjk0LjMzNSA4NC44MDA0IDI4My45MTkgMTA5LjcyNUwyODEuNjAzIDExNkgyNTBDMjI5IDExNiAyMTIgMTMzIDIxMiAxNTRWMjE0QzIxMiAyMzUgMjI5IDI1MiAyNTAgMjUySDI4MkwyODMuOTE5IDI1OC4yNzVDMjk0LjMzNSAyODMuMiAzMTYuODA3IDMwMCAzNDQgMzAwQzM3MS4xOTMgMzAwIDM5My42NjUgMjgzLjIgNDA0LjA4MSAyNTguMjc1TDQwNiAyNTJINDM4QzQ1OSAyNTIgNDc2IDIzNSA0NzYgMjE0VjE1NEM0NzYgMTMzIDQ1OSAxMTYgNDM4IDExNkg0MDYuMzk3TDQwNC4wODEgMTA5LjcyNUMzOTMuNjY1IDg0LjgwMDQgMzcxLjE5MyA2OCAzNDQgNjhaIiBmaWxsPSIjMzEzMTMxIi8+CjxyZWN0IHg9IjI3OSIgeT0iMTE2IiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjEzNiIgcng9IjIwIiBmaWxsPSIjRjg1MzU0IiBzdHJva2U9IiMzMTMxMzEiIHN0cm9rZS13aWR0aD0iNCIvPgo8dGV4dCB4PSIzNDQiIHk9IjE5NCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1TSDwvdGV4dD4KPC9zdmc+" alt="Magodo Specialist Hospital Logo" class="hospital-logo">
+            </div>
+            <h1>Magodo Specialist Hospital</h1>
+            <p>Your health journey starts here - let's make it amazing together!</p>
+        </div>
+
+        <div class="tab-navigation">
+            <div class="tab-indicator" id="tabIndicator"></div>
+            <button class="tab-btn active" data-tab="feedback">
+                <span class="tab-icon">💬</span>
+                Feedback
+            </button>
+            <button class="tab-btn" data-tab="registration">
+                <span class="tab-icon">👤</span>
+                Register
+            </button>
+        </div>
+
+        <div class="tab-content active" id="feedbackTab">
+            <div class="survey-form" id="surveyForm">
+                <div class="progress-indicator">
+                    <div class="progress-dot active"></div>
+                    <div class="progress-dot"></div>
+                    <div class="progress-dot"></div>
+                </div>
+
+                <div class="question-section">
+                    <h3 class="question-title">How satisfied are you with our care?</h3>
+                    <div class="rating-grid" id="satisfactionRating">
+                        <button type="button" class="rating-option" data-value="1">
+                            <span class="rating-emoji">😞</span>
+                            <span class="rating-label">Very Poor</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="2">
+                            <span class="rating-emoji">😕</span>
+                            <span class="rating-label">Poor</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="3">
+                            <span class="rating-emoji">😐</span>
+                            <span class="rating-label">Fair</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="4">
+                            <span class="rating-emoji">😊</span>
+                            <span class="rating-label">Good</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="5">
+                            <span class="rating-emoji">🤩</span>
+                            <span class="rating-label">Excellent</span>
+                        </button>
+                    </div>
+                    <div class="rating-scale">
+                        <span>Not satisfied</span>
+                        <span>Very satisfied</span>
+                    </div>
+                </div>
+
+                <div class="question-section">
+                    <h3 class="question-title">Would you recommend us?</h3>
+                    <div class="rating-grid" id="recommendRating">
+                        <button type="button" class="rating-option" data-value="1">
+                            <span class="rating-emoji">👎</span>
+                            <span class="rating-label">Never</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="2">
+                            <span class="rating-emoji">🤷</span>
+                            <span class="rating-label">Unlikely</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="3">
+                            <span class="rating-emoji">🤔</span>
+                            <span class="rating-label">Maybe</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="4">
+                            <span class="rating-emoji">👍</span>
+                            <span class="rating-label">Likely</span>
+                        </button>
+                        <button type="button" class="rating-option" data-value="5">
+                            <span class="rating-emoji">💯</span>
+                            <span class="rating-label">Definitely</span>
+                        </button>
+                    </div>
+                    <div class="rating-scale">
+                        <span>Would not recommend</span>
+                        <span>Highly recommend</span>
+                    </div>
+                </div>
+
+                <div class="comment-section">
+                    <label for="patientName">Your Name (Optional)</label>
+                    <input type="text" id="patientName" class="comment-input" placeholder="What should we call you?" />
+                </div>
+
+                <div class="comment-section">
+                    <label for="patientContact">Email or Phone (Optional)</label>
+                    <input type="text" id="patientContact" class="comment-input" placeholder="email@example.com or +234 801 234 5678" />
+                </div>
+
+                <div class="comment-section">
+                    <label for="comments">Share your experience!</label>
+                    <textarea id="comments" class="comment-textarea" placeholder="Tell us about your visit - we love hearing from you! Share what made you smile or how we can improve..." rows="4"></textarea>
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" id="submitBtn" disabled>Send Feedback 🚀</button>
+                </div>
+            </div>
+
+            <div class="thank-you" id="thankYou">
+                <div class="success-icon"></div>
+                <h2>Amazing! Thank You! 🎉</h2>
+                <p>Your feedback means the world to us! We're constantly working to make your healthcare experience even better. You rock! 💪</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="registrationTab">
+            <form id="registrationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastName" class="required">Last Name</label>
+                        <input type="text" id="lastName" class="form-input" placeholder="Your family name" required>
+                        <div class="error-message">Please enter your last name</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="required">First Name</label>
+                        <input type="text" id="firstName" class="form-input" placeholder="Your first name" required>
+                        <div class="error-message">Please enter your first name</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" class="form-input" placeholder="Your middle name (optional)">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="maritalStatus" class="required">Marital Status</label>
+                        <select id="maritalStatus" class="form-select" required>
+                            <option value="">Select marital status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                            <option value="separated">Separated</option>
+                        </select>
+                        <div class="error-message">Please select your marital status</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="+234 801 234 5678" required>
+                        <div class="error-message">Please enter a valid phone number</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="email@example.com">
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dateOfBirth" class="required">Date of Birth</label>
+                        <input type="date" id="dateOfBirth" class="form-input" required>
+                        <div class="error-message">Please select your date of birth</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender" class="required">Gender</label>
+                        <select id="gender" class="form-select" required>
+                            <option value="">Select your gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message">Please select your gender</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="payor" class="required">Payor Type</label>
+                        <select id="payor" class="form-select" required>
+                            <option value="">Select payor type</option>
+                            <option value="personal">Personal - ₦7,500</option>
+                            <option value="family">Family - ₦15,000</option>
+                            <option value="aiico">AIICO</option>
+                            <option value="anchor">Anchor</option>
+                            <option value="axamansard">Axamansard</option>
+                            <option value="bastion">Bastion</option>
+                            <option value="clearline">Clearline</option>
+                            <option value="hygeia">Hygeia</option>
+                            <option value="leadway">Leadway</option>
+                            <option value="nem">NEM</option>
+                            <option value="phillips">Phillips</option>
+                            <option value="reliance">Reliance</option>
+                            <option value="tht">THT</option>
+                        </select>
+                        <div class="error-message">Please select your payor type</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hmoId">HMO ID Number</label>
+                        <input type="text" id="hmoId" class="form-input" placeholder="Enter your HMO ID" disabled>
+                        <div class="error-message">Please enter your HMO ID</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="required">Your Address</label>
+                    <textarea id="address" class="comment-textarea" placeholder="Enter your full address..." rows="2" required></textarea>
+                    <div class="error-message">Please enter your address</div>
+                </div>
+
+                <div class="payment-info" id="paymentInfo">
+                    <h4>💳 Payment Details</h4>
+                    <p id="paymentText">Please make payment of <span class="price-highlight">₦7,500</span> to complete your registration.</p>
+                </div>
+
+                <div class="checkbox-group" onclick="toggleConsent()">
+                    <div class="custom-checkbox" id="consentCheckbox"></div>
+                    <label class="checkbox-label">
+                        I consent to the processing of my personal information for medical purposes and agree to the hospital's privacy policy.
+                    </label>
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" id="registerBtn" disabled>Complete Registration 🎯</button>
+                </div>
+            </form>
+
+            <div class="registration-success" id="registrationSuccess">
+                <div class="success-animation"></div>
+                <h2>Welcome to the Family! 🎉</h2>
+                <p id="successMessage">Your registration is complete! We're excited to be part of your health journey. We'll be in touch soon! 💚</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'feedback';
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const tabIndicator = document.getElementById('tabIndicator');
+
+        function switchTab(tabName) {
+            tabButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.tab === tabName);
+            });
+
+            tabContents.forEach(content => {
+                content.classList.toggle('active', content.id === `${tabName}Tab`);
+            });
+
+            const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
+            const containerRect = activeBtn.parentElement.getBoundingClientRect();
+            const btnRect = activeBtn.getBoundingClientRect();
+            
+            const leftOffset = btnRect.left - containerRect.left - 6;
+            tabIndicator.style.transform = `translateX(${leftOffset}px)`;
+
+            currentTab = tabName;
+
+            if (navigator.vibrate) {
+                navigator.vibrate([50, 30, 100]);
+            }
+        }
+
+        setTimeout(() => {
+            switchTab('feedback');
+        }, 100);
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchTab(btn.dataset.tab);
+            });
+        });
+
+        const registrationForm = document.getElementById('registrationForm');
+        const consentCheckbox = document.getElementById('consentCheckbox');
+        const registerBtn = document.getElementById('registerBtn');
+        const payorSelect = document.getElementById('payor');
+        const hmoIdInput = document.getElementById('hmoId');
+        const paymentInfo = document.getElementById('paymentInfo');
+        const paymentText = document.getElementById('paymentText');
+
+        let consentGiven = false;
+
+        payorSelect.addEventListener('change', function() {
+            const selectedPayor = this.value;
+            const hmoOptions = ['aiico', 'anchor', 'axamansard', 'bastion', 'clearline', 'hygeia', 'leadway', 'nem', 'phillips', 'reliance', 'tht'];
+
+            if (hmoOptions.includes(selectedPayor)) {
+                hmoIdInput.disabled = false;
+                hmoIdInput.required = true;
+                hmoIdInput.style.opacity = '1';
+                paymentInfo.classList.remove('show');
+            } else {
+                hmoIdInput.disabled = true;
+                hmoIdInput.required = false;
+                hmoIdInput.value = '';
+                hmoIdInput.style.opacity = '0.7';
+
+                if (selectedPayor === 'personal') {
+                    paymentText.innerHTML = 'Please pay <span class="price-highlight">₦7,500</span> to <span class="price-highlight">5380820030</span> (Moniepoint) to complete your registration! 💚';
+                    paymentInfo.classList.add('show');
+                } else if (selectedPayor === 'family') {
+                    paymentText.innerHTML = 'Please pay <span class="price-highlight">₦15,000</span> to <span class="price-highlight">5380820030</span> (Moniepoint) for family registration! 👨‍👩‍👧‍👦';
+                    paymentInfo.classList.add('show');
+                } else {
+                    paymentInfo.classList.remove('show');
+                }
+            }
+            validateRegistrationForm();
+        });
+
+        function toggleConsent() {
+            consentGiven = !consentGiven;
+            const checkbox = document.getElementById('consentCheckbox');
+            checkbox.classList.toggle('checked', consentGiven);
+            
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+            
+            validateRegistrationForm();
+        }
+
+        function validateRegistrationForm() {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const
