@@ -87,33 +87,22 @@
         }
 
         .hospital-icon {
-            width: 80px;
-            height: 80px;
-            background: white;
+            width: 70px;
+            height: 70px;
+            background: transparent;
             border-radius: 50%;
             margin: 0 auto 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 
-                0 8px 30px rgba(30, 64, 175, 0.4),
-                0 0 0 8px rgba(30, 64, 175, 0.1);
+                0 8px 30px rgba(0, 0, 0, 0.1),
+                0 0 0 8px rgba(0, 0, 0, 0.05);
             animation: pulse 2s infinite, wiggle 3s infinite;
             position: relative;
-            border: 3px solid #1e40af;
-            overflow: hidden;
-        }
-
-        .hospital-logo {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            animation: logoFloat 2s infinite;
-        }
-
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-3px) scale(1.02); }
+            font-size: 28px;
+            font-weight: 800;
+            color: #001f3f; /* Matches darker navy blue title color */
         }
 
         @keyframes pulse {
@@ -125,6 +114,10 @@
             0%, 100% { transform: rotate(0deg); }
             25% { transform: rotate(-3deg); }
             75% { transform: rotate(3deg); }
+        }
+
+        .hospital-icon::before {
+            content: 'MSH';
         }
 
         .hospital-icon::after {
@@ -142,7 +135,7 @@
         }
 
         .hospital-header h1 {
-            color: #1e40af;
+            color: #001f3f; /* Darker navy blue */
             font-size: 20px;
             font-weight: 800;
             margin-bottom: 6px;
@@ -159,19 +152,19 @@
             display: flex;
             margin-bottom: 20px;
             border-radius: 20px;
-            background: rgba(30, 64, 175, 0.1);
+            background: rgba(152, 251, 152, 0.1);
             padding: 6px;
             position: relative;
-            box-shadow: inset 0 2px 8px rgba(30, 64, 175, 0.15);
+            box-shadow: inset 0 2px 8px rgba(152, 251, 152, 0.15);
         }
 
         .tab-indicator {
             position: absolute;
-            background: #1e40af;
+            background: #27ae60; /* Darker green for consistency */
             border-radius: 16px;
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 
-                0 4px 20px rgba(30, 64, 175, 0.4),
+                0 4px 20px rgba(152, 251, 152, 0.4),
                 0 0 0 2px rgba(255, 255, 255, 0.5);
             width: 50%;
             height: 52px;
@@ -208,7 +201,7 @@
         }
 
         .tab-btn:not(.active):hover {
-            color: #1e40af;
+            color: #27ae60; /* Darker green for hover */
             transform: translateY(-2px) scale(1.02);
         }
 
@@ -281,7 +274,7 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #3b82f6;
+            border-color: #27ae60; /* Darker green */
             background: white;
         }
 
@@ -293,6 +286,7 @@
             color: #a0a0a0;
             font-weight: 500;
             font-size: 14px;
+            opacity: 1; /* Consistent opacity */
         }
 
         .form-input.error {
@@ -321,24 +315,25 @@
 
         .form-select {
             width: 100%;
-            padding: 16px 18px;
+            padding: 16px 36px 16px 18px;
             border: 3px solid #e9ecef;
             border-radius: 16px;
             font-family: inherit;
             font-size: 16px;
             font-weight: 500;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23636e72"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center;
+            background-size: 20px;
             color: #2d3436;
             cursor: pointer;
             transition: all 0.3s ease;
             appearance: none;
-            padding-right: 18px;
         }
 
         .form-select:focus {
             outline: none;
-            border-color: #3b82f6;
-            background: white;
+            border-color: #27ae60; /* Darker green */
+            background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%2327ae60"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>') no-repeat right 12px center;
+            background-size: 20px;
         }
 
         .form-select:focus-visible {
@@ -363,8 +358,8 @@
         }
 
         .checkbox-group:hover {
-            background: rgba(59, 130, 246, 0.08);
-            border-color: rgba(59, 130, 246, 0.2);
+            background: rgba(152, 251, 152, 0.08);
+            border-color: rgba(152, 251, 152, 0.2);
             transform: translateY(-1px);
         }
 
@@ -384,8 +379,8 @@
         }
 
         .custom-checkbox.checked {
-            background: #3b82f6;
-            border-color: #3b82f6;
+            background: #27ae60; /* Darker green */
+            border-color: #27ae60;
             transform: scale(1.1) rotate(5deg);
         }
 
@@ -414,8 +409,8 @@
         }
 
         .payment-info {
-            background: rgba(59, 130, 246, 0.1);
-            border: 3px solid rgba(59, 130, 246, 0.2);
+            background: rgba(152, 251, 152, 0.1);
+            border: 3px solid rgba(152, 251, 152, 0.2);
             border-radius: 20px;
             padding: 20px;
             margin-top: 16px;
@@ -443,7 +438,7 @@
         }
 
         .payment-info h4 {
-            color: #3b82f6;
+            color: #27ae60; /* Darker green */
             font-size: 16px;
             font-weight: 800;
             margin-bottom: 12px;
@@ -464,9 +459,9 @@
         }
 
         .price-highlight {
-            color: #3b82f6;
+            color: #27ae60; /* Darker green */
             font-weight: 800;
-            background: rgba(59, 130, 246, 0.15);
+            background: rgba(152, 251, 152, 0.15);
             padding: 4px 8px;
             border-radius: 8px;
             font-size: 16px;
@@ -478,9 +473,9 @@
         .question-section {
             margin-bottom: 20px;
             padding: 16px;
-            background: rgba(59, 130, 246, 0.03);
+            background: rgba(152, 251, 152, 0.03);
             border-radius: 20px;
-            border: 2px solid rgba(59, 130, 246, 0.1);
+            border: 2px solid rgba(152, 251, 152, 0.1);
         }
 
         .question-title {
@@ -503,14 +498,14 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background: #3b82f6;
+            background: #27ae60; /* Darker green */
             border-radius: 2px;
             animation: glow 2s infinite;
         }
 
         @keyframes glow {
-            0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); }
-            50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+            0%, 100% { box-shadow: 0 0 5px rgba(152, 251, 152, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(152, 251, 152, 0.6); }
         }
 
         .rating-grid {
@@ -531,26 +526,27 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 4px 2px;
+            padding: 8px;
             position: relative;
             overflow: hidden;
+            min-height: 60px;
         }
 
         .rating-option:hover {
             transform: translateY(-3px) scale(1.03) rotate(1deg);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
-            border-color: #3b82f6;
+            box-shadow: 0 8px 25px rgba(152, 251, 152, 0.25);
+            border-color: #27ae60; /* Darker green */
         }
 
         .rating-option.selected {
-            border-color: #3b82f6;
+            border-color: #27ae60; /* Darker green */
             border-width: 4px;
             transform: translateY(-2px) scale(1.05);
         }
 
         .rating-emoji {
-            font-size: 20px;
-            margin-bottom: 2px;
+            font-size: 22px;
+            margin-bottom: 4px;
             position: relative;
             z-index: 1;
             transition: transform 0.3s ease;
@@ -569,11 +565,11 @@
         }
 
         .rating-label {
-            font-size: 9px;
+            font-size: 11px;
             color: #636e72;
             font-weight: 700;
             text-align: center;
-            line-height: 1.0;
+            line-height: 1.1;
             position: relative;
             z-index: 1;
             text-transform: uppercase;
@@ -582,10 +578,12 @@
             overflow-wrap: break-word;
             hyphens: auto;
             max-width: 100%;
+            padding: 0 4px;
+            white-space: nowrap; /* Ensure text stays on a single line */
         }
 
         .rating-option.selected .rating-label {
-            color: #3b82f6;
+            color: #27ae60; /* Darker green */
             font-weight: 800;
         }
 
@@ -637,7 +635,7 @@
 
         .comment-input:focus, .comment-textarea:focus {
             outline: none;
-            border-color: #3b82f6;
+            border-color: #27ae60; /* Darker green */
             background: white;
         }
 
@@ -645,6 +643,7 @@
             color: #a0a0a0;
             font-weight: 500;
             font-size: 14px;
+            opacity: 1; /* Consistent opacity */
         }
 
         .submit-section {
@@ -655,7 +654,7 @@
         .submit-btn {
             width: 100%;
             padding: 18px 24px;
-            background: #3b82f6;
+            background: #27ae60; /* Darker green */
             color: white;
             border: none;
             border-radius: 20px;
@@ -668,7 +667,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 
-                0 8px 30px rgba(59, 130, 246, 0.4),
+                0 8px 30px rgba(152, 251, 152, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3);
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -688,8 +687,8 @@
         .submit-btn:hover:not(:disabled) {
             transform: translateY(-4px) scale(1.02);
             box-shadow: 
-                0 15px 40px rgba(59, 130, 246, 0.5),
-                0 0 0 4px rgba(59, 130, 246, 0.2);
+                0 15px 40px rgba(152, 251, 152, 0.5),
+                0 0 0 4px rgba(152, 251, 152, 0.2);
             animation: buttonPulse 0.6s ease-out;
         }
 
@@ -732,15 +731,15 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            background: #3b82f6;
+            background: #27ae60; /* Darker green */
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             animation: successBounce 2s infinite;
             box-shadow: 
-                0 10px 40px rgba(59, 130, 246, 0.4),
-                0 0 0 8px rgba(59, 130, 246, 0.1);
+                0 10px 40px rgba(152, 251, 152, 0.4),
+                0 0 0 8px rgba(152, 251, 152, 0.1);
         }
 
         @keyframes successBounce {
@@ -761,7 +760,7 @@
         }
 
         .thank-you h2, .registration-success h2 {
-            color: #3b82f6;
+            color: #27ae60; /* Darker green */
             margin-bottom: 16px;
             font-size: 24px;
             font-weight: 800;
@@ -787,27 +786,6 @@
             overflow-wrap: break-word;
         }
 
-        .progress-indicator {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            gap: 12px;
-        }
-
-        .progress-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #e9ecef;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        .progress-dot.active {
-            background: #3b82f6;
-            transform: scale(1.3);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        }
-
         @media (max-width: 480px) {
             body { 
                 padding: 2px;
@@ -828,11 +806,11 @@
                 width: 60px;
                 height: 60px;
                 margin-bottom: 8px;
+                font-size: 24px;
             }
             
-            .hospital-logo {
-                width: 50px;
-                height: 50px;
+            .hospital-icon::before {
+                font-size: 24px;
             }
             
             .tab-btn {
@@ -864,18 +842,21 @@
             }
             
             .rating-option {
-                padding: 4px 1px;
+                padding: 6px;
                 border-radius: 14px;
+                min-height: 50px;
             }
             
             .rating-emoji {
-                font-size: 16px;
+                font-size: 18px;
                 margin-bottom: 2px;
             }
             
             .rating-label {
-                font-size: 8px;
+                font-size: 9px;
                 line-height: 1.0;
+                padding: 0 2px;
+                white-space: nowrap; /* Ensure single line */
             }
             
             .comment-textarea {
@@ -923,15 +904,17 @@
             
             .form-input, .form-select {
                 font-size: 16px;
-                padding: 14px 16px;
+                padding: 14px 32px 14px 16px;
             }
             
             .form-select {
-                padding-right: 16px;
+                background-position: right 10px center;
+                background-size: 18px;
             }
             
             .form-input::placeholder, .comment-input::placeholder, .comment-textarea::placeholder {
                 font-size: 14px;
+                opacity: 1; /* Consistent opacity */
             }
             
             .rating-scale {
@@ -977,8 +960,9 @@
             }
             
             .rating-option {
-                padding: 4px 1px;
+                padding: 4px;
                 border-radius: 12px;
+                min-height: 45px;
             }
             
             .rating-emoji {
@@ -986,7 +970,9 @@
             }
             
             .rating-label {
-                font-size: 7px;
+                font-size: 8px;
+                padding: 0 1px;
+                white-space: nowrap; /* Ensure single line */
             }
             
             .rating-scale {
@@ -995,6 +981,7 @@
             
             .form-input::placeholder, .comment-input::placeholder, .comment-textarea::placeholder {
                 font-size: 13px;
+                opacity: 1; /* Consistent opacity */
             }
             
             .question-title {
@@ -1006,7 +993,9 @@
             }
             
             .form-select {
-                padding-right: 14px;
+                padding-right: 30px;
+                background-position: right 8px center;
+                background-size: 16px;
             }
         }
 
@@ -1026,7 +1015,7 @@
         .rating-option:focus-visible,
         .submit-btn:focus-visible,
         .custom-checkbox:focus-visible {
-            outline: 3px solid #3b82f6;
+            outline: 3px solid #27ae60; /* Darker green */
             outline-offset: 2px;
         }
 
@@ -1036,7 +1025,7 @@
         }
         
         .hospital-header h1 {
-            color: #3b82f6;
+            color: #001f3f; /* Darker navy blue */
         }
         
         .hospital-header p {
@@ -1063,9 +1052,13 @@
         }
         
         .form-input::placeholder,
+        .form-select::placeholder,
         .comment-input::placeholder,
         .comment-textarea::placeholder {
             color: #a0a0a0;
+            font-weight: 500;
+            font-size: 14px;
+            opacity: 1; /* Consistent opacity */
         }
         
         .rating-option {
@@ -1074,19 +1067,17 @@
         }
         
         .question-section {
-            background: rgba(59, 130, 246, 0.03);
-            border-color: rgba(59, 130, 246, 0.1);
+            background: rgba(152, 251, 152, 0.03);
+            border-color: rgba(152, 251, 152, 0.1);
         }
     </style>
 </head>
 <body>
     <div class="main-container">
         <div class="hospital-header">
-            <div class="hospital-icon">
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjg4IiBoZWlnaHQ9IjY4OCIgdmlld0JveD0iMCAwIDY4OCA2ODgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01NDQgMTQ0SDE0NFY1NDRINTQ0VjE0NFoiIGZpbGw9IiNCQkI0RjciLz4KPHA+CjxyZWN0IHg9IjEzNSIgeT0iMTM1IiB3aWR0aD0iNDE4IiBoZWlnaHQ9IjQxOCIgcng9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjMzEzMTMxIiBzdHJva2Utd2lkdGg9IjE4Ii8+CjxyZWN0IHg9IjE2MCIgeT0iMjMwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjIyOCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjxyZWN0IHg9IjI0MCIgeT0iMjMwIiB3aWR0aD0iMjA4IiBoZWlnaHQ9IjExMCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjxyZWN0IHg9IjI0MCIgeT0iMzQ4IiB3aWR0aD0iMjA4IiBoZWlnaHQ9IjExMCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjxyZWN0IHg9IjQxOCIgeT0iMjMwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjIyOCIgcng9IjIwIiBmaWxsPSIjRjg1MzU0Ii8+CjwvcGF0aD4KPHA+CjxyZWN0IHg9IjI3MCIgeT0iMjI1IiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIyNzAiIHk9IjI1NSIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxyZWN0IHg9IjM0NSIgeT0iMjI1IiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIzNDUiIHk9IjI1NSIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxyZWN0IHg9IjI3MCIgeT0iMzkwIiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIyNzAiIHk9IjQyMCIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxyZWN0IHg9IjM0NSIgeT0iMzkwIiB3aWR0aD0iNTUiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iIzMxMzEzMSIvPgo8cmVjdCB4PSIzNDUiIHk9IjQyMCIgd2lkdGg9IjU1IiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMTMxMzEiLz4KPHA+CjxjaXJjbGUgY3g9IjM0NCIgY3k9IjM0NCIgcj0iMzUwIiBzdHJva2U9IiMzMTMxMzEiIHN0cm9rZS13aWR0aD0iMTIiIGZpbGw9Im5vbmUiLz4KPGNpcmNsZSBjeD0iMzQ0IiBjeT0iMzQ0IiByPSIzMDAiIHN0cm9rZT0iIzMxMzEzMSIgc3Ryb2tlLXdpZHRoPSIxMiIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMzQ0IDE0NEMzNDQgMTQ0IDQ5NCAyNzggNDk0IDM0NEM0OTQgNDEwIDQ0MCA1NDQgMzQ0IDU0NEMyNDggNTQ0IDE5NCA0MTAgMTk0IDM0NEMxOTQgMjc4IDM0NCAxNDQgMzQ0IDE0NFoiIGZpbGw9IiNGODUzNTQiLz4KPHA+CjxjaXJjbGUgY3g9IjI3NCIgY3k9IjMwNCIgcj0iMTQiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjQxNCIgY3k9IjMwNCIgcj0iMTQiIGZpbGw9IndoaXRlIi8+CjwvcGF0aD4KPHA+CjxyZWN0IHg9IjMxNCIgeT0iMjY0IiB3aWR0aD0iNjAiIGhlaWdodD0iMTAwIiByeD0iMzAiIGZpbGw9IiNGODUzNTQiLz4KPHA+CjxyZWN0IHg9IjMzNCIgeT0iMzgwIiB3aWR0aD0iMjAiIGhlaWdodD0iOTAiIHJ4PSIxMCIgZmlsbD0iI0Y4NTM1NCIvPgo8L3BhdGg+CjxyZWN0IHg9IjMxNSIgeT0iNDAzIiB3aWR0aD0iNTgiIGhlaWdodD0iMjAiIHJ4PSIxMCIgZmlsbD0iI0Y4NTM1NCIvPgo8cGF0aCBkPSJNMzQ0IDY4QzMxNi44MDcgNjggMjk0LjMzNSA4NC44MDA0IDI4My45MTkgMTA5LjcyNUwyODEuNjAzIDExNkgyNTBDMjI5IDExNiAyMTIgMTMzIDIxMiAxNTRWMjE0QzIxMiAyMzUgMjI5IDI1MiAyNTAgMjUySDI4MkwyODMuOTE5IDI1OC4yNzVDMjk0LjMzNSAyODMuMiAzMTYuODA3IDMwMCAzNDQgMzAwQzM3MS4xOTMgMzAwIDM5My42NjUgMjgzLjIgNDA0LjA4MSAyNTguMjc1TDQwNiAyNTJINDM4QzQ1OSAyNTIgNDc2IDIzNSA0NzYgMjE0VjE1NEM0NzYgMTMzIDQ1OSAxMTYgNDM4IDExNkg0MDYuMzk3TDQwNC4wODEgMTA5LjcyNUMzOTMuNjY1IDg0LjgwMDQgMzcxLjE5MyA2OCAzNDQgNjhaIiBmaWxsPSIjMzEzMTMxIi8+CjxyZWN0IHg9IjI3OSIgeT0iMTE2IiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjEzNiIgcng9IjIwIiBmaWxsPSIjRjg1MzU0IiBzdHJva2U9IiMzMTMxMzEiIHN0cm9rZS13aWR0aD0iNCIvPgo8dGV4dCB4PSIzNDQiIHk9IjE5NCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1TSDwvdGV4dD4KPC9zdmc+" alt="Magodo Specialist Hospital Logo" class="hospital-logo">
-            </div>
+            <div class="hospital-icon"></div>
             <h1>Magodo Specialist Hospital</h1>
-            <p>Your health journey starts here - let's make it amazing together!</p>
+            <p>You are amazing!</p>
         </div>
 
         <div class="tab-navigation">
@@ -1103,12 +1094,6 @@
 
         <div class="tab-content active" id="feedbackTab">
             <div class="survey-form" id="surveyForm">
-                <div class="progress-indicator">
-                    <div class="progress-dot active"></div>
-                    <div class="progress-dot"></div>
-                    <div class="progress-dot"></div>
-                </div>
-
                 <div class="question-section">
                     <h3 class="question-title">How satisfied are you with our care?</h3>
                     <div class="rating-grid" id="satisfactionRating">
@@ -1239,7 +1224,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="phone" class="required">Phone Number</label>
-                        <input type="tel" id="phone" class="form-input" placeholder="+234 801 234 5678" required>
+                        <input type="tel" id="phone" class="form-input" placeholder="e.g. +234 801 234 5678" required>
                         <div class="error-message">Please enter a valid phone number</div>
                     </div>
                 </div>
@@ -1247,7 +1232,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-input" placeholder="email@example.com">
+                        <input type="email" id="email" class="form-input" placeholder="e.g. email@example.com">
                         <div class="error-message">Please enter a valid email address</div>
                     </div>
                 </div>
@@ -1336,95 +1321,578 @@
     </div>
 
     <script>
-        let currentTab = 'feedback';
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        const tabIndicator = document.getElementById('tabIndicator');
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentTab = 'feedback';
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabIndicator = document.getElementById('tabIndicator');
+            const registrationForm = document.getElementById('registrationForm');
+            const consentCheckbox = document.getElementById('consentCheckbox');
+            const registerBtn = document.getElementById('registerBtn');
+            const payorSelect = document.getElementById('payor');
+            const hmoIdInput = document.getElementById('hmoId');
+            const paymentInfo = document.getElementById('paymentInfo');
+            const paymentText = document.getElementById('paymentText');
+            let consentGiven = false;
 
-        function switchTab(tabName) {
-            tabButtons.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.tab === tabName);
-            });
+            function switchTab(tabName) {
+                tabButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.tab === tabName);
+                });
 
-            tabContents.forEach(content => {
-                content.classList.toggle('active', content.id === `${tabName}Tab`);
-            });
+                tabContents.forEach(content => {
+                    content.classList.toggle('active', content.id === `${tabName}Tab`);
+                });
 
-            const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
-            const containerRect = activeBtn.parentElement.getBoundingClientRect();
-            const btnRect = activeBtn.getBoundingClientRect();
-            
-            const leftOffset = btnRect.left - containerRect.left - 6;
-            tabIndicator.style.transform = `translateX(${leftOffset}px)`;
+                const activeBtn = document.querySelector(`[data-tab="${tabName}"]`);
+                const containerRect = activeBtn.parentElement.getBoundingClientRect();
+                const btnRect = activeBtn.getBoundingClientRect();
+                
+                const leftOffset = btnRect.left - containerRect.left - 6;
+                tabIndicator.style.transform = `translateX(${leftOffset}px)`;
 
-            currentTab = tabName;
+                currentTab = tabName;
 
-            if (navigator.vibrate) {
-                navigator.vibrate([50, 30, 100]);
-            }
-        }
-
-        setTimeout(() => {
-            switchTab('feedback');
-        }, 100);
-
-        tabButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                switchTab(btn.dataset.tab);
-            });
-        });
-
-        const registrationForm = document.getElementById('registrationForm');
-        const consentCheckbox = document.getElementById('consentCheckbox');
-        const registerBtn = document.getElementById('registerBtn');
-        const payorSelect = document.getElementById('payor');
-        const hmoIdInput = document.getElementById('hmoId');
-        const paymentInfo = document.getElementById('paymentInfo');
-        const paymentText = document.getElementById('paymentText');
-
-        let consentGiven = false;
-
-        payorSelect.addEventListener('change', function() {
-            const selectedPayor = this.value;
-            const hmoOptions = ['aiico', 'anchor', 'axamansard', 'bastion', 'clearline', 'hygeia', 'leadway', 'nem', 'phillips', 'reliance', 'tht'];
-
-            if (hmoOptions.includes(selectedPayor)) {
-                hmoIdInput.disabled = false;
-                hmoIdInput.required = true;
-                hmoIdInput.style.opacity = '1';
-                paymentInfo.classList.remove('show');
-            } else {
-                hmoIdInput.disabled = true;
-                hmoIdInput.required = false;
-                hmoIdInput.value = '';
-                hmoIdInput.style.opacity = '0.7';
-
-                if (selectedPayor === 'personal') {
-                    paymentText.innerHTML = 'Please pay <span class="price-highlight">₦7,500</span> to <span class="price-highlight">5380820030</span> (Moniepoint) to complete your registration! 💚';
-                    paymentInfo.classList.add('show');
-                } else if (selectedPayor === 'family') {
-                    paymentText.innerHTML = 'Please pay <span class="price-highlight">₦15,000</span> to <span class="price-highlight">5380820030</span> (Moniepoint) for family registration! 👨‍👩‍👧‍👦';
-                    paymentInfo.classList.add('show');
-                } else {
-                    paymentInfo.classList.remove('show');
+                if (navigator.vibrate) {
+                    navigator.vibrate([50, 30, 100]);
                 }
             }
-            validateRegistrationForm();
-        });
 
-        function toggleConsent() {
-            consentGiven = !consentGiven;
-            const checkbox = document.getElementById('consentCheckbox');
-            checkbox.classList.toggle('checked', consentGiven);
-            
-            if (navigator.vibrate) {
-                navigator.vibrate(50);
+            setTimeout(() => {
+                switchTab('feedback');
+            }, 100);
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    switchTab(btn.dataset.tab);
+                });
+            });
+
+            if (payorSelect) {
+                payorSelect.addEventListener('change', function() {
+                    const selectedPayor = this.value;
+                    const hmoOptions = ['aiico', 'anchor', 'axamansard', 'bastion', 'clearline', 'hygeia', 'leadway', 'nem', 'phillips', 'reliance', 'tht'];
+
+                    if (hmoOptions.includes(selectedPayor)) {
+                        hmoIdInput.disabled = false;
+                        hmoIdInput.required = true;
+                        hmoIdInput.style.opacity = '1';
+                        paymentInfo.classList.remove('show');
+                    } else {
+                        hmoIdInput.disabled = true;
+                        hmoIdInput.required = false;
+                        hmoIdInput.value = '';
+                        hmoIdInput.style.opacity = '0.7';
+
+                        if (selectedPayor === 'personal') {
+                            paymentText.innerHTML = 'Please pay <span class="price-highlight">₦7,500</span> to <span class="price-highlight">5380820030</span> (Moniepoint) to complete your registration! 💚';
+                            paymentInfo.classList.add('show');
+                        } else if (selectedPayor === 'family') {
+                            paymentText.innerHTML = 'Please pay <span class="price-highlight">₦15,000</span> to <span class="price-highlight">5380820030</span> (Moniepoint) for family registration! 👨‍👩‍👧‍👦';
+                            paymentInfo.classList.add('show');
+                        } else {
+                            paymentInfo.classList.remove('show');
+                        }
+                    }
+                    validateRegistrationForm();
+                });
+            } else {
+                console.error('Element with id "payor" not found');
             }
-            
-            validateRegistrationForm();
-        }
 
-        function validateRegistrationForm() {
-            const firstName = document.getElementById('firstName').value.trim();
-            const lastName = document.getElementById('lastName').value.trim();
-            const
+            function toggleConsent() {
+                consentGiven = !consentGiven;
+                consentCheckbox.classList.toggle('checked', consentGiven);
+                
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+                
+                validateRegistrationForm();
+            }
+
+            function validateRegistrationForm() {
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const maritalStatus = document.getElementById('maritalStatus').value;
+                const phone = document.getElementById('phone').value.trim();
+                const dateOfBirth = document.getElementById('dateOfBirth').value;
+                const gender = document.getElementById('gender').value;
+                const address = document.getElementById('address').value.trim();
+                const payor = payorSelect ? payorSelect.value : '';
+                const hmoId = document.getElementById('hmoId').value.trim();
+
+                const hmoOptions = ['aiico', 'anchor', 'axamansard', 'bastion', 'clearline', 'hygeia', 'leadway', 'nem', 'phillips', 'reliance', 'tht'];
+                const hmoIdValid = !hmoOptions.includes(payor) || (hmoOptions.includes(payor) && hmoId);
+
+                const isValid = firstName && lastName && maritalStatus && phone && dateOfBirth && gender && address && payor && consentGiven && hmoIdValid;
+
+                registerBtn.disabled = !isValid;
+            }
+
+            ['firstName', 'lastName', 'middleName', 'maritalStatus', 'phone', 'dateOfBirth', 'gender', 'address', 'hmoId'].forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('input', validateRegistrationForm);
+                    element.addEventListener('change', validateRegistrationForm);
+                }
+            });
+
+            if (payorSelect) {
+                payorSelect.addEventListener('change', validateRegistrationForm);
+            }
+
+            document.getElementById('phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.startsWith('234')) {
+                    value = '+' + value;
+                } else if (value.startsWith('0')) {
+                    value = '+234' + value.substring(1);
+                } else if (value && !value.startsWith('+')) {
+                    value = '+234' + value;
+                }
+                e.target.value = value;
+            });
+
+            document.getElementById('dateOfBirth').addEventListener('change', function(e) {
+                const dateInput = e.target;
+                if (dateInput.value) {
+                    const date = new Date(dateInput.value);
+                    const day = String(date.getDate()).padStart(2, '0');
+                    const month = String(date.getMonth() + 1).padStart(2, '0');
+                    const year = date.getFullYear();
+                    dateInput.dataset.formattedValue = `${day}/${month}/${year}`;
+                } else {
+                    dateInput.dataset.formattedValue = '';
+                }
+            });
+
+            registrationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (registerBtn.disabled) return;
+
+                const selectedPayor = payorSelect ? payorSelect.value : '';
+                const dateOfBirthInput = document.getElementById('dateOfBirth');
+
+                const registrationData = {
+                    lastName: document.getElementById('lastName').value.trim(),
+                    firstName: document.getElementById('firstName').value.trim(),
+                    middleName: document.getElementById('middleName').value.trim() || 'Not provided',
+                    maritalStatus: document.getElementById('maritalStatus').value,
+                    phone: document.getElementById('phone').value.trim(),
+                    email: document.getElementById('email').value.trim() || 'Not provided',
+                    dateOfBirth: dateOfBirthInput.dataset.formattedValue || dateOfBirthInput.value,
+                    gender: document.getElementById('gender').value,
+                    address: document.getElementById('address').value.trim(),
+                    payor: selectedPayor,
+                    hmoId: document.getElementById('hmoId').value.trim() || 'Not applicable',
+                    timestamp: new Date().toISOString(),
+                    registrationId: 'REG-' + Date.now()
+                };
+
+                registerBtn.innerHTML = '<span style="opacity: 0.7">✨ Processing Magic...</span>';
+                registerBtn.disabled = true;
+
+                sendRegistrationEmail(registrationData);
+                updateSuccessMessage(selectedPayor);
+
+                setTimeout(() => {
+                    document.getElementById('registrationForm').style.display = 'none';
+                    document.getElementById('registrationSuccess').style.display = 'block';
+                }, 1500);
+            });
+
+            function updateSuccessMessage(payorType) {
+                const successMessage = document.getElementById('successMessage');
+                let message = "Your registration is complete! We're excited to be part of your health journey. We'll be in touch soon! 💚";
+
+                if (payorType === 'personal') {
+                    message += " Remember to pay ₦7,500 to 5380820030 (Moniepoint) to activate your account! 🎯";
+                } else if (payorType === 'family') {
+                    message += " Remember to pay ₦15,000 to 5380820030 (Moniepoint) for your family plan! 👨‍👩‍👧‍👦";
+                }
+
+                successMessage.textContent = message;
+            }
+
+            function sendRegistrationEmail(data) {
+                const payorDisplay = {
+                    'personal': 'Personal (₦7,500)',
+                    'family': 'Family (₦15,000)',
+                    'aiico': 'AIICO',
+                    'anchor': 'Anchor',
+                    'axamansard': 'Axamansard',
+                    'bastion': 'Bastion',
+                    'clearline': 'Clearline',
+                    'hygeia': 'Hygeia',
+                    'leadway': 'Leadway',
+                    'nem': 'NEM',
+                    'phillips': 'Phillips',
+                    'reliance': 'Reliance',
+                    'tht': 'THT'
+                };
+
+                const templateParams = {
+                    hospital_name: 'Magodo Specialist Hospital',
+                    registration_id: data.registrationId,
+                    patient_name: `${data.lastName} ${data.firstName}${data.middleName !== 'Not provided' ? ' ' + data.middleName : ''}`,
+                    marital_status: data.maritalStatus,
+                    phone_number: data.phone,
+                    email_address: data.email,
+                    date_of_birth: data.dateOfBirth,
+                    gender: data.gender,
+                    address: data.address,
+                    hmo: payorDisplay[data.payor] || data.payor,
+                    hmo_id: data.hmoId,
+                    registration_timestamp: new Date(data.timestamp).toLocaleString(),
+                    priority_level: '🟡 Normal Priority'
+                };
+
+                emailjs.send('service_vmknsar', 'template_2f4o2a9', templateParams)
+                    .then(function(response) {
+                        console.log('Registration email sent successfully!', response.status, response.text);
+                    }, function(error) {
+                        console.log('Registration email failed to send:', error);
+                    });
+            }
+
+            let satisfactionRating = null;
+            let recommendRating = null;
+
+            function updateProgress() {
+                // Progress dots removed, function left empty
+            }
+
+            document.querySelectorAll('.rating-option').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const container = this.parentElement;
+                    const containerType = container.id;
+
+                    container.querySelectorAll('.rating-option').forEach(sibling => {
+                        sibling.classList.remove('selected');
+                    });
+
+                    this.classList.add('selected');
+
+                    const value = parseInt(this.dataset.value);
+
+                    if (containerType === 'satisfactionRating') {
+                        satisfactionRating = value;
+                    } else if (containerType === 'recommendRating') {
+                        recommendRating = value;
+                    }
+
+                    if (navigator.vibrate) {
+                        navigator.vibrate([50, 20, 80]);
+                    }
+
+                    updateProgress();
+                    updateSubmitButton();
+                });
+            });
+
+            function updateSubmitButton() {
+                const submitBtn = document.getElementById('submitBtn');
+                if (satisfactionRating !== null && recommendRating !== null) {
+                    submitBtn.disabled = false;
+                }
+            }
+
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                const patientName = document.getElementById('patientName').value.trim();
+                const patientContact = document.getElementById('patientContact').value.trim();
+                const comments = document.getElementById('comments').value;
+                const timestamp = new Date().toISOString();
+
+                const feedbackData = {
+                    satisfaction: satisfactionRating,
+                    recommendation: recommendRating,
+                    patientName: patientName || 'Anonymous Hero',
+                    patientContact: patientContact || 'Not provided',
+                    comments: comments,
+                    timestamp: timestamp,
+                    userAgent: navigator.userAgent,
+                    hospital: 'Magodo Specialist Hospital'
+                };
+
+                submitFeedback(feedbackData);
+            });
+
+            function submitFeedback(data) {
+                const submitBtn = document.getElementById('submitBtn');
+                
+                submitBtn.innerHTML = '<span style="opacity: 0.7">🚀 Sending Feedback...</span>';
+                submitBtn.disabled = true;
+
+                sendFeedbackEmail(data);
+
+                setTimeout(() => {
+                    document.getElementById('surveyForm').style.display = 'none';
+                    document.getElementById('thankYou').style.display = 'block';
+                }, 1500);
+            }
+
+            function analyzeTextFeedback(text) {
+                if (!text || text.trim().length === 0) {
+                    return {
+                        score: 3,
+                        sentiment: 'neutral',
+                        keywords: [],
+                        issues: [],
+                        positives: []
+                    };
+                }
+
+                const lowerText = text.toLowerCase();
+
+                const positiveWords = {
+                    'excellent': 5, 'amazing': 5, 'outstanding': 5, 'exceptional': 5, 'perfect': 5,
+                    'great': 4, 'good': 4, 'wonderful': 4, 'fantastic': 4, 'lovely': 4, 'awesome': 4,
+                    'nice': 3, 'okay': 3, 'fine': 3, 'decent': 3, 'satisfied': 4,
+                    'professional': 4, 'friendly': 4, 'helpful': 4, 'clean': 4, 'caring': 4,
+                    'quick': 3, 'fast': 3, 'efficient': 4, 'recommend': 4, 'happy': 4, 'pleased': 4,
+                    'impressed': 4, 'comfortable': 3, 'smooth': 3, 'easy': 3, 'thorough': 4, 'empathetic': 4
+                };
+
+                const negativeWords = {
+                    'terrible': 1, 'awful': 1, 'horrible': 1, 'worst': 1, 'hate': 1, 'disgusting': 1,
+                    'unacceptable': 1, 'outrageous': 1, 'appalling': 1, 'shocking': 1, 'ridiculous': 1,
+                    'nightmare': 1, 'disaster': 1, 'useless': 1, 'pathetic': 1, 'incompetent': 1,
+                    'bad': 2, 'poor': 2, 'disappointing': 2, 'frustrated': 2, 'annoyed': 2, 'upset': 2,
+                    'dissatisfied': 2, 'unhappy': 2, 'concerned': 2, 'worried': 2, 'uncomfortable': 2,
+                    'unprofessional': 1, 'rude': 1, 'disrespectful': 1, 'careless': 2, 'negligent': 1,
+                    'slow': 2, 'delayed': 2, 'late': 2, 'waiting': 2, 'wait': 2, 'long': 2,
+                    'expensive': 2, 'overpriced': 2, 'costly': 2, 'dirty': 1, 'unclean': 1, 'messy': 2,
+                    'untrained': 1, 'inexperienced': 2, 'unfriendly': 2, 'dismissive': 1, 'arrogant': 1,
+                    'insensitive': 1, 'cold': 2, 'harsh': 2, 'impatient': 2, 'rude': 2
+                };
+
+                const negativePatterns = [
+                    { pattern: /without empathy|no empathy|lack.*empathy/i, weight: 1, issue: 'lack of empathy' },
+                    { pattern: /never.*again|won't.*back|not.*returning/i, weight: 1, issue: 'will not return' },
+                    { pattern: /moving mountains|extremely difficult/i, weight: 1, issue: 'very reluctant to return' },
+                    { pattern: /counterproductive|makes no sense/i, weight: 2, issue: 'questions approach' },
+                    { pattern: /don't you think|shouldn't.*be/i, weight: 2, issue: 'rhetorical criticism' },
+                    { pattern: /how can.*\?/i, weight: 2, issue: 'questioning service' },
+                    { pattern: /treated.*badly|treated.*poorly|mistreated/i, weight: 1, issue: 'poor treatment' },
+                    { pattern: /staff.*problem|staff.*issue|staff.*rude/i, weight: 1, issue: 'staff problems' },
+                    { pattern: /waste.*time|wasted.*time/i, weight: 2, issue: 'time wasted' },
+                    { pattern: /no point|what's the point/i, weight: 1, issue: 'questioning value' }
+                ];
+
+                const issueKeywords = [
+                    'wait', 'waiting', 'delay', 'delayed', 'late', 'slow', 'long time', 'hours',
+                    'rude', 'unfriendly', 'unprofessional', 'dismissive', 'arrogant', 'cold',
+                    'dirty', 'unclean', 'messy', 'crowded', 'noisy',
+                    'expensive', 'cost', 'price', 'billing', 'payment', 'overpriced',
+                    'appointment', 'schedule', 'booking', 'availability', 'cancelled',
+                    'empathy', 'compassion', 'understanding', 'care', 'treatment',
+                    'staff', 'nurse', 'doctor', 'reception', 'service'
+                ];
+
+                let totalScore = 0;
+                let wordCount = 0;
+                let foundKeywords = [];
+                let issues = [];
+                let positives = [];
+                let negativeModifier = 0;
+
+                negativePatterns.forEach(pattern => {
+                    if (pattern.pattern.test(text)) {
+                        totalScore += pattern.weight;
+                        wordCount++;
+                        issues.push(pattern.issue);
+                        negativeModifier += (3 - pattern.weight);
+                    }
+                });
+
+                Object.keys(positiveWords).forEach(word => {
+                    if (lowerText.includes(word)) {
+                        totalScore += positiveWords[word];
+                        wordCount++;
+                        foundKeywords.push(word);
+                        positives.push(word);
+                    }
+                });
+
+                Object.keys(negativeWords).forEach(word => {
+                    if (lowerText.includes(word)) {
+                        totalScore += negativeWords[word];
+                        wordCount++;
+                        foundKeywords.push(word);
+                    }
+                });
+
+                issueKeywords.forEach(issue => {
+                    if (lowerText.includes(issue)) {
+                        if (!issues.includes(issue)) {
+                            issues.push(issue);
+                        }
+                    }
+                });
+
+                const questionMarks = (text.match(/\?/g) || []).length;
+                if (questionMarks > 1) {
+                    negativeModifier += 0.5;
+                }
+
+                const exclamationMarks = (text.match(/!/g) || []).length;
+                if (exclamationMarks > 1) {
+                    negativeModifier += 0.3;
+                }
+
+                let finalScore;
+                if (wordCount === 0) {
+                    finalScore = 3;
+                } else {
+                    const averageScore = totalScore / wordCount;
+                    finalScore = Math.max(1, Math.min(5, averageScore - negativeModifier));
+                }
+
+                if (issues.length > 2 && finalScore > 2.5) {
+                    finalScore = Math.max(1.5, finalScore - 1);
+                }
+
+                if (negativeModifier > 1 && finalScore > 2) {
+                    finalScore = Math.min(2, finalScore);
+                }
+
+                finalScore = Math.round(finalScore * 10) / 10;
+
+                let sentiment;
+                if (finalScore >= 4) sentiment = 'positive';
+                else if (finalScore <= 2) sentiment = 'negative';
+                else sentiment = 'neutral';
+
+                return {
+                    score: finalScore,
+                    sentiment: sentiment,
+                    keywords: foundKeywords,
+                    issues: issues,
+                    positives: positives,
+                    textLength: text.length,
+                    isDetailed: text.length > 50,
+                    questionMarks: questionMarks,
+                    exclamationMarks: exclamationMarks,
+                    negativeModifier: negativeModifier
+                };
+            }
+
+            function sendFeedbackEmail(data) {
+                const satisfactionLabels = ['', 'Very Poor', 'Poor', 'Fair', 'Good', 'Excellent'];
+                const recommendLabels = ['', 'Never', 'Unlikely', 'Maybe', 'Likely', 'Definitely'];
+
+                const textAnalysis = analyzeTextFeedback(data.comments);
+
+                const overallScore = (
+                    (data.satisfaction * 0.4) +
+                    (data.recommendation * 0.4) +
+                    (textAnalysis.score * 0.2)
+                ).toFixed(1);
+
+                let priority = 'Normal';
+                let priorityEmoji = '🟡';
+
+                if (overallScore <= 2.5) {
+                    priority = 'High - Needs Attention';
+                    priorityEmoji = '🔴';
+                } else if (overallScore >= 4.5) {
+                    priority = 'Low - Very Satisfied';
+                    priorityEmoji = '🟢';
+                }
+
+                let analysisDetails = ` DETAILED ANALYSIS:
+• Overall Score: ${overallScore}/5.0
+• Text Sentiment: ${textAnalysis.sentiment.charAt(0).toUpperCase() + textAnalysis.sentiment.slice(1)} (${textAnalysis.score}/5)
+• Priority Level: ${priority} ${priorityEmoji}`;
+
+                if (textAnalysis.issues.length > 0) {
+                    analysisDetails += `\n• Issues Mentioned: ${textAnalysis.issues.join(', ')}`;
+                }
+
+                if (textAnalysis.positives.length > 0) {
+                    analysisDetails += `\n• Positive Aspects: ${textAnalysis.positives.join(', ')}`;
+                }
+
+                if (textAnalysis.isDetailed) {
+                    analysisDetails += `\n• Detailed Feedback: Yes (${textAnalysis.textLength} characters)`;
+                }
+
+                if (textAnalysis.keywords.length > 0) {
+                    analysisDetails += `\n• Keywords Found: ${textAnalysis.keywords.join(', ')}`;
+                }
+
+                const templateParams = {
+                    hospital_name: 'Magodo Specialist Hospital',
+                    patient_name: data.patientName,
+                    patient_contact: data.patientContact,
+                    satisfaction_rating: `${satisfactionLabels[data.satisfaction]} (${data.satisfaction}/5)`,
+                    recommendation_score: `${recommendLabels[data.recommendation]} (${data.recommendation}/5)`,
+                    comments: data.comments || 'No additional comments provided',
+                    timestamp: new Date(data.timestamp).toLocaleString(),
+                    overall_score: `${overallScore}/5.0`,
+                    priority_level: `${priority} ${priorityEmoji}`,
+                    sentiment: textAnalysis.sentiment.charAt(0).toUpperCase() + textAnalysis.sentiment.slice(1),
+                    text_score: `${textAnalysis.score}/5`,
+                    analysis_details: analysisDetails,
+                    issues_found: textAnalysis.issues.length > 0 ? textAnalysis.issues.join(', ') : 'None',
+                    positives_found: textAnalysis.positives.length > 0 ? textAnalysis.positives.join(', ') : 'None'
+                };
+
+                emailjs.send('service_vmknsar', 'template_2wpah22', templateParams)
+                    .then(function(response) {
+                        console.log('Feedback email sent successfully!', response.status, response.text);
+                        console.log('Analysis Results:', textAnalysis);
+                        console.log('Overall Score:', overallScore);
+                    }, function(error) {
+                        console.log('Feedback email failed to send:', error);
+                    });
+            }
+
+            let konamiCode = [];
+            const konamiSequence = [
+                'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+                'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+                'KeyB', 'KeyA'
+            ];
+
+            document.addEventListener('keydown', function(e) {
+                konamiCode.push(e.code);
+                konamiCode = konamiCode.slice(-10);
+
+                if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+                    document.body.style.animation = 'rainbow 2s infinite';
+                    document.body.style.background = 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffd93d, #6c5ce7)';
+                    document.body.style.backgroundSize = '400% 400%';
+                    
+                    setTimeout(() => {
+                        document.body.style.animation = '';
+                        document.body.style.background = '#f5f6f5';
+                    }, 3000);
+
+                    if (navigator.vibrate) {
+                        navigator.vibrate([100, 50, 100, 50, 200]);
+                    }
+                }
+            });
+
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes rainbow {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+            `;
+            document.head.appendChild(style);
+
+            document.addEventListener('click', function(e) {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = e.clientX + 'px';
+                sparkle.style.top = e.clientY + 'px';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.fontSize = '20px';
+                sparkle.style.zIndex = '9999';
+                sparkle.style.animation = 'sparkleFloat 1s ease-out
