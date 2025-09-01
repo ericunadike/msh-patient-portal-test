@@ -1411,7 +1411,7 @@
                 console.error('Element with id "payor" not found');
             }
 
-            function toggleConsent() {
+            window.toggleConsent = function() {
                 consentGiven = !consentGiven;
                 consentCheckbox.classList.toggle('checked', consentGiven);
                 
