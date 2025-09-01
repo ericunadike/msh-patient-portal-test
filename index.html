@@ -510,7 +510,7 @@
         }
 
         .rating-option {
-            aspect-ratio: 1;
+            aspect-ratio: auto;
             border: 3px solid #e9ecef;
             border-radius: 16px;
             background: white;
@@ -523,7 +523,7 @@
             padding: 8px;
             position: relative;
             overflow: hidden;
-            min-height: 60px;
+            min-height: 70px;
         }
 
         .rating-option:hover {
@@ -559,7 +559,7 @@
         }
 
         .rating-label {
-            font-size: 11px;
+            font-size: 12px;
             color: #636e72;
             font-weight: 700;
             text-align: center;
@@ -575,7 +575,7 @@
             padding: 0 4px;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            text-overflow: clip;
         }
 
         .rating-option.selected .rating-label {
