@@ -1676,12 +1676,34 @@
                 const lowerText = text.toLowerCase();
 
                 const positiveWords = {
-                    'excellent': 5, 'amazing': 5, 'outstanding': 5, 'exceptional': 5, 'perfect': 5,
-                    'great': 4, 'good': 4, 'wonderful': 4, 'fantastic': 4, 'lovely': 4, 'awesome': 4,
-                    'nice': 3, 'okay': 3, 'fine': 3, 'decent': 3, 'satisfied': 4,
-                    'professional': 4, 'friendly': 4, 'helpful': 4, 'clean': 4, 'caring': 4,
-                    'quick': 3, 'fast': 3, 'efficient': 4, 'recommend': 4, 'happy': 4, 'pleased': 4,
-                    'impressed': 4, 'comfortable': 3, 'smooth': 3, 'easy': 3, 'thorough': 4, 'empathetic': 4
+                    // Weight 5 - Exceptional experiences
+                    'excellent': 5, 'outstanding': 5, 'exceptional': 5, 'amazing': 5, 'perfect': 5,
+                    'superb': 5, 'flawless': 5, 'incredible': 5, 'phenomenal': 5, 'exemplary': 5,
+                    'remarkable': 5, 'extraordinary': 5, 'magnificent': 5, 'brilliant': 5, 'stellar': 5,
+
+                    // Weight 4 - Very positive experiences
+                    'wonderful': 4, 'fantastic': 4, 'great': 4, 'awesome': 4, 'marvelous': 4,
+                    'professional': 4, 'compassionate': 4, 'caring': 4, 'empathetic': 4, 'thorough': 4,
+                    'knowledgeable': 4, 'skilled': 4, 'competent': 4, 'efficient': 4, 'helpful': 4,
+                    'friendly': 4, 'courteous': 4, 'respectful': 4, 'understanding': 4, 'attentive': 4,
+                    'responsive': 4, 'prompt': 4, 'timely': 4, 'organized': 4, 'clean': 4,
+                    'comfortable': 4, 'reassuring': 4, 'calming': 4, 'healing': 4, 'therapeutic': 4,
+                    'satisfied': 4, 'pleased': 4, 'impressed': 4, 'grateful': 4, 'recommend': 4,
+                    'trust': 4, 'confident': 4, 'relieved': 4, 'blessed': 4, 'thankful': 4,
+
+                    // Weight 3 - Positive experiences
+                    'good': 3, 'nice': 3, 'pleasant': 3, 'adequate': 3, 'acceptable': 3,
+                    'reasonable': 3, 'appropriate': 3, 'decent': 3, 'fine': 3, 'suitable': 3,
+                    'convenient': 3, 'accessible': 3, 'available': 3, 'accommodating': 3, 'flexible': 3,
+                    'patient': 3, 'gentle': 3, 'kind': 3, 'polite': 3, 'informative': 3,
+                    'clear': 3, 'comfortable': 3, 'calm': 3, 'peaceful': 3, 'welcoming': 3,
+    
+                    // Weight 2 - Mild positive
+                    'okay': 2, 'fair': 2, 'manageable': 2, 'tolerable': 2, 'bearable': 2,
+                    'passable': 2, 'satisfactory': 2, 'workable': 2, 'functional': 2, 'usable': 2,
+                    
+                    // Weight 1 - Barely positive
+                    'minimal': 1, 'basic': 1, 'standard': 1, 'ordinary': 1, 'typical': 1
                 };
 
                 const negativeWords = {
