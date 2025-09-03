@@ -1707,16 +1707,32 @@
                 };
 
                 const negativeWords = {
-                    'terrible': 1, 'awful': 1, 'horrible': 1, 'worst': 1, 'hate': 1, 'disgusting': 1,
-                    'unacceptable': 1, 'outrageous': 1, 'appalling': 1, 'shocking': 1, 'ridiculous': 1,
-                    'nightmare': 1, 'disaster': 1, 'useless': 1, 'pathetic': 1, 'incompetent': 1,
-                    'bad': 2, 'poor': 2, 'disappointing': 2, 'frustrated': 2, 'annoyed': 2, 'upset': 2,
-                    'dissatisfied': 2, 'unhappy': 2, 'concerned': 2, 'worried': 2, 'uncomfortable': 2,
-                    'unprofessional': 1, 'rude': 1, 'disrespectful': 1, 'careless': 2, 'negligent': 1,
-                    'slow': 2, 'delayed': 2, 'late': 2, 'waiting': 2, 'wait': 2, 'long': 2,
-                    'expensive': 2, 'overpriced': 2, 'costly': 2, 'dirty': 1, 'unclean': 1, 'messy': 2,
-                    'untrained': 1, 'inexperienced': 2, 'unfriendly': 2, 'dismissive': 1, 'arrogant': 1,
-                    'insensitive': 1, 'cold': 2, 'harsh': 2, 'impatient': 2, 'rude': 2
+                    // Weight 1 - Severely negative
+                    'terrible': 1, 'awful': 1, 'horrible': 1, 'worst': 1, 'disgusting': 1,
+                    'appalling': 1, 'outrageous': 1, 'unacceptable': 1, 'shocking': 1, 'disgraceful': 1,
+                    'nightmare': 1, 'disaster': 1, 'catastrophic': 1, 'deplorable': 1, 'abysmal': 1,
+                    'pathetic': 1, 'useless': 1, 'worthless': 1, 'incompetent': 1, 'negligent': 1,
+                    'reckless': 1, 'dangerous': 1, 'harmful': 1, 'unsafe': 1, 'risky': 1,
+                    'unprofessional': 1, 'rude': 1, 'disrespectful': 1, 'arrogant': 1, 'dismissive': 1,
+                    'condescending': 1, 'insensitive': 1, 'callous': 1, 'heartless': 1, 'cruel': 1,
+                    'uncaring': 1, 'indifferent': 1, 'hostile': 1, 'aggressive': 1, 'abusive': 1,
+                    'discriminatory': 1, 'biased': 1, 'prejudiced': 1, 'unfair': 1, 'unjust': 1,
+                    'dirty': 1, 'filthy': 1, 'unsanitary': 1, 'contaminated': 1, 'infected': 1,
+                    'chaotic': 1, 'disorganized': 1, 'confused': 1, 'lost': 1, 'abandoned': 1,
+    
+                    // Weight 2 - Moderately negative
+                    'bad': 2, 'poor': 2, 'disappointing': 2, 'unsatisfactory': 2, 'inadequate': 2,
+                    'insufficient': 2, 'lacking': 2, 'deficient': 2, 'subpar': 2, 'below average': 2,
+                    'frustrated': 2, 'annoyed': 2, 'upset': 2, 'dissatisfied': 2, 'unhappy': 2,
+                    'displeased': 2, 'concerned': 2, 'worried': 2, 'anxious': 2, 'stressed': 2,
+                    'uncomfortable': 2, 'uneasy': 2, 'tense': 2, 'nervous': 2, 'scared': 2,
+                    'slow': 2, 'delayed': 2, 'late': 2, 'overdue': 2, 'behind': 2,
+                    'waiting': 2, 'lengthy': 2, 'prolonged': 2, 'extended': 2, 'excessive': 2,
+                    'expensive': 2, 'costly': 2, 'overpriced': 2, 'unaffordable': 2, 'steep': 2,
+                    'confusing': 2, 'unclear': 2, 'complicated': 2, 'difficult': 2, 'challenging': 2,
+                    'inconvenient': 2, 'inaccessible': 2, 'unavailable': 2, 'limited': 2, 'restricted': 2,
+                    'cold': 2, 'impersonal': 2, 'distant': 2, 'unfriendly': 2, 'unwelcoming': 2,
+                    'careless': 2, 'sloppy': 2, 'rushed': 2, 'hasty': 2, 'impatient': 2
                 };
 
                 const negativePatterns = [
