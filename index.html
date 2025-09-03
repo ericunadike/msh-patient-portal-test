@@ -1726,13 +1726,13 @@
                     'frustrated': 2, 'annoyed': 2, 'upset': 2, 'dissatisfied': 2, 'unhappy': 2,
                     'displeased': 2, 'concerned': 2, 'worried': 2, 'anxious': 2, 'stressed': 2,
                     'uncomfortable': 2, 'uneasy': 2, 'tense': 2, 'nervous': 2, 'scared': 2,
-                    'slow': 2, 'delayed': 2, 'late': 2, 'overdue': 2, 'behind': 2,
+                    'slow': 2, 'delayed': 2, 'late': 2, 'overdue': 2, 'behind': 2, 'frustrating': 2,
                     'waiting': 2, 'lengthy': 2, 'prolonged': 2, 'extended': 2, 'excessive': 2,
                     'expensive': 2, 'costly': 2, 'overpriced': 2, 'unaffordable': 2, 'steep': 2,
                     'confusing': 2, 'unclear': 2, 'complicated': 2, 'difficult': 2, 'challenging': 2,
                     'inconvenient': 2, 'inaccessible': 2, 'unavailable': 2, 'limited': 2, 'restricted': 2,
                     'cold': 2, 'impersonal': 2, 'distant': 2, 'unfriendly': 2, 'unwelcoming': 2,
-                    'careless': 2, 'sloppy': 2, 'rushed': 2, 'hasty': 2, 'impatient': 2
+                    'careless': 2, 'sloppy': 2, 'rushed': 2, 'hasty': 2, 'impatient': 2, 'sour': 2
                 };
 
                 const negativePatterns = [
@@ -1745,6 +1745,9 @@
                     { pattern: /never.*again|won't.*back|not.*returning|avoid.*hospital/i, weight: 1, issue: 'will not return' },
                     { pattern: /wouldn't.*recommend|can't.*recommend|advise.*against/i, weight: 1, issue: 'would not recommend' },
                     { pattern: /find.*another.*hospital|go.*elsewhere|different.*hospital/i, weight: 1, issue: 'seeking alternatives' },
+                    { pattern: /everything.*seemed.*chaotic|chaotic.*situation/i, weight: 1, issue: 'organizational chaos' },
+                    { pattern: /something.*needs.*to.*be.*done|needs.*improvement/i, weight: 2, issue: 'service improvement needed' },
+                    { pattern: /started.*to.*go.*sour|went.*downhill|got.*worse/i, weight: 2, issue: 'declining experience' },
                     
                     // Medical care quality concerns
                     { pattern: /misdiagnosed|wrong.*diagnosis|missed.*diagnosis/i, weight: 1, issue: 'diagnostic concerns' },
@@ -1770,6 +1773,7 @@
                     { pattern: /no.*communication|poor.*communication|lack.*information/i, weight: 2, issue: 'communication breakdown' },
                     { pattern: /nobody.*told|wasn't.*informed|left.*in.*dark/i, weight: 2, issue: 'lack of information' },
                     { pattern: /conflicting.*information|mixed.*messages|confused.*instructions/i, weight: 2, issue: 'conflicting information' },
+                    { pattern: /no.*feedback|no.*information|wasn't.*told/i, weight: 2, issue: 'lack of information' },
                     
                     // Billing and cost issues
                     { pattern: /surprise.*bill|unexpected.*charges|billing.*error/i, weight: 2, issue: 'billing problems' },
